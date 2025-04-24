@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - VITE_OPENAI_API_KEY=${VITE_OPENAI_API_KEY}
+      - VITE_OPENAI_BASE_URL=${VITE_OPENAI_BASE_URL:-https://api.openai.com/v1}
+      - MAX_USAGE_COUNT=${MAX_USAGE_COUNT:-3}
+    volumes:
+      - ./uploads:/app/uploads
+    restart: unless-stopped 
