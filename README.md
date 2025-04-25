@@ -29,7 +29,7 @@
 1. 克隆项目到本地：
 
 ```bash
-git clone [https://github.com/yourusername/zhiling-image-app.git](https://github.com/seven2202/gpt-image)
+git clone https://github.com/seven2202/gpt-image.git
 cd zhiling-image-app
 ```
 
